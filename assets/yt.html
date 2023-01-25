@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YT</title>
+    <style>
+
+        .container{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-auto-rows: auto;
+        }
+        .item {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        .item_1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            top: 0;
+
+        }
+        .navBtn{
+
+        }
+        .logo{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+
+        }
+        .search{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 0 1 728px;
+            min-width: 0px;
+
+        }
+        .searchForm{
+            display: flex;
+            flex-direction: row;
+            margin: 0 0 0 40px;
+            padding: 0 4px;
+            flex: 1;
+        }
+        .search input{
+            position: relative;
+            flex: 1;
+
+            display: flex;
+            flex-direction: row;
+        }
+        .search_box{
+            width: 100%;
+
+        }
+
+
+
+        .item_2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            width: 100%;
+            display: grid;
+            box-sizing: border-box;
+            border: 1px solid black;
+            grid-template-columns: 20% 80%;
+        }
+
+        .navigation{
+            display: grid;
+            flex-direction: column;
+            overflow-x: auto;
+        }
+        .navigationBtn{
+            text-align: left;
+            padding: 1px 10px;
+            font-weight:600;
+            border-radius: 10px;
+            border: none;
+            display: flex;
+
+
+        }
+        .navigationBtn img{
+            padding-right: 15px;
+            padding-top: 5px;
+        }
+        .navigationBtn p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item item_1">
+        <div class="logo">
+            <button class="navBtn">
+                <img src="images/nav.png" alt="1">
+            </button>
+            <button>
+                <img src="images/logo.png" alt="2">
+            </button>
+        </div>
+        <div class="search">
+            <div class="searchForm">
+                <form>
+                    <div class="search_box">
+                       
+                        <input type="text" placeholder="введите запрос" >
+                    </div>
+                </form>
+                <button type="submit" class="searchBtn">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="vc">
+                <button class="voice"><img src="images/voice.png" alt="Кнопка «button»"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="item item_2">
+        <div class="navigation">
+            <button class="navigationBtn">
+                <img src="images/home1.png" alt="3">
+                <p>Главная</p>
+            </button>
+        </div>
+        <div class="recommendation-video">
+            <div class="recommendation">1</div>
+            <div class="contentVideo">2</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
