@@ -11,7 +11,7 @@
     }
     .container{
 
-      grid-template-columns: 20% 80%;
+      grid-template-columns: 10% 90%;
       display: grid;
     }
     .item {
@@ -21,7 +21,7 @@
     }
     .item_1 {
       grid-column-start: 1;
-      grid-column-end: 6;
+      grid-column-end: 4;
       grid-row-start: 1;
       grid-row-end: 3;
       height: 45px;
@@ -146,28 +146,24 @@
 
     /*2*/
     .item_2 {
-
       grid-column-start: 1;
       grid-column-end: 1;
       grid-row-start: 3;
       grid-row-end: 6;
       display: flex;
       flex-direction: column;
-
-
+      min-width: 60px;
 
     }
 
     .home{
-      text-align: left;
-      padding: 1px 10px;
       font-weight:600;
       border-radius: 10px;
       border: none;
-      display: flex;
+      padding: 0;
+      margin: 0;
     }
     .home img{
-      padding-right: 15px;
       padding-top: 5px;
     }
     .home p{
@@ -182,17 +178,14 @@
 
 
 
-    /*тип навигация*/
+    /*видео.навигация*/
     .item_3 {
-
       grid-column-start: 2;
-      grid-column-end: 6;
+      grid-column-end: 4;
       grid-row-start: 3;
-      grid-row-end: 3;
-      height: 45px;
+      grid-row-end: 6;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 0;
       white-space: nowrap;
     }
@@ -311,40 +304,23 @@
     <button class="home">Видеоигры</button>
     <button class="home">Спорт</button>
   </div>
-
-  <div class="item3-4">
-    <div class="item item_3">
-      <button class="panel">Все</button>
-      <button class="panel">Видеоигры</button>
-      <button class="panel">Сейчас в эфире</button>
-      <button class="panel">Музыка</button>
-      <button class="panel">Туристические направления</button>
-      <button class="panel">Последние опубликованные</button>
-      <button class="panel">Посмотрено</button>
-    </div>
-    <div class="item item_4">
+  <div class="item item_3">
+    <button class="panel">Все</button>
+    <button class="panel">Видеоигры</button>
+    <button class="panel">Сейчас в эфире</button>
+    <button class="panel">Музыка</button>
+    <button class="panel">Туристические направления</button>
+    <button class="panel">Последние опубликованные</button>
+    <button class="panel">Посмотрено</button>
+  </div>
+  <!---<div class="item item_4">
       <div class="video-container">
         <div class="video-block">
           <iframe class="video-block__content" src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-  </div>
+    </div>--->
+</div>
 
 
 
