@@ -5,7 +5,9 @@
     <title>YT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
+        *{
+            box-sizing: border-box;
+        }
         .container{
             display: grid;
             grid-template-columns: 20% 80%;
@@ -16,6 +18,7 @@
 
             border: 1px solid black;
         }
+        /*шапка*/
         .item_1{
             grid-column-start: 1;
             grid-column-end: 4;
@@ -66,6 +69,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            align-content: center;
             border: 1px solid #ccc;
             box-shadow: inset 0 1px 2px #eee;
             padding: 0;
@@ -76,7 +80,7 @@
             display: flex;
             align-items: center;
             min-width: 60px;
-            min-height: 42px;
+            min-height: 40px;
             border: 1px solid #ccc;
             box-shadow: inset 0 1px 2px #eee;
             border-radius: 0 40px 40px 0;
@@ -127,24 +131,22 @@
             outline: none;
         }
 
-
+        /*главный блок*/
         .item_2{
             grid-column-start: 1;
             grid-column-end: 4;
-            width: 100%;
             display: grid;
             box-sizing: border-box;
             border: 1px solid black;
-            grid-template-columns: 5% 95%;
-            justify-content: space-between;
             flex-wrap: wrap;
-            
+            grid-template-columns: 5% 95%;
+
         }
 
         .navigation{
-            display: grid;
+            display: flex;
             flex-direction: column;
-
+            height: 20%;
 
         }
         .navigationBtn{
@@ -165,12 +167,36 @@
 
         .recommendation-video{
             display: grid;
+
             grid-template-rows: 20% 80%;
-            float:left;
-
-
+            flex-direction: row;
 
         }
+        /*рекомендации*/
+        .recommendation{
+            display: flex;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .panel{
+            border-radius: 8px;
+            border: none;
+            margin: 12px;
+            height: 32px;
+            min-width: 12px;
+            box-sizing: border-box;
+            outline: none;
+            overflow: hidden;
+            cursor: pointer;
+            flex-direction: row;
+            align-items: center;
+            display: inline-flex;
+        }
+
     </style>
 </head>
 <body>
@@ -222,8 +248,20 @@
             <button class="navigationBtn">История</button>
         </div>
         <div class="recommendation-video">
-            <div class="recommendation">1</div>
-            <div class="contentVideo">2</div>
+            <div class="recommendation">
+                <button class="panel">Все</button>
+                <button class="panel">Видеоигры</button>
+                <button class="panel">Сейчас в эфире</button>
+                <button class="panel">Музыка</button>
+                <button class="panel">Туристические направления</button>
+                <button class="panel">Последние опубликованные</button>
+                <button class="panel">Посмотрено</button>
+                <button class="panel">Посмотрено</button>
+                <button class="panel">Посмотрено</button>
+            </div>
+            <div class="contentVideo">
+                <button class="panel">Посмотрено</button>
+            </div>
         </div>
     </div>
 </div>
