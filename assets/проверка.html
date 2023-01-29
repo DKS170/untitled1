@@ -27,27 +27,12 @@
             display: flex;
             justify-content: space-between;
             align-content: center;
-            padding: 0 1%;
+            /*padding: 0 16px;*/
 
 
         }
         .navBtn{
-            display: flex;
-            align-items: center;
-            background: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 40px;
-        }
-        .navBtn:hover{
-            background-color: #ddd;
-        }
-        .logoBtn{
-            display: flex;
-            align-items: center;
-            background: white;
-            border: none;
-            cursor: pointer;
+
         }
         .logo{
             display: flex;
@@ -60,7 +45,6 @@
             flex-direction: row;
             align-items: center;
             min-width: 0;
-
 
         }
         .searchForm{
@@ -111,14 +95,10 @@
             flex-direction: row;
             align-items: center;
             height: 100%;
-            padding: 10px;
+            padding: 7px;
             border-radius: 40px;
             border: 1px solid #fff;
             background:white;
-
-        }
-        .voice:hover{
-            background-color: #ddd;
         }
 
         .login{
@@ -146,6 +126,10 @@
             padding: 0 5px 0 0;
         }
 
+
+        .settingsBtn{
+            outline: none;
+        }
 
         /*главный блок*/
         .item_2{
@@ -254,11 +238,10 @@
     <div class="item item_1">
         <div class="logo">
             <button class="navBtn">
-                <img src="images/nav.png" alt="управление навигации">
+                <img src="images/nav.png" alt="1">
             </button>
-            <button class="logoBtn">
-                <img src="images/logo.png" alt="логотип">
-                YouTube
+            <button>
+                <img src="images/logo.png" alt="2">
             </button>
         </div>
         <div class="search">
@@ -266,21 +249,21 @@
                 <form class="form">
                     <input type="text" placeholder="введите запрос">
                     <button type="submit" class="searchBtn">
-                        <img src="images/search.png" alt="Кнопка поиск">
+                        <img src="images/search.png" alt="Кнопка «button»">
                     </button>
                     <button class="voice">
-                        <img src="images/voice.png" alt="голос">
+                        <img src="images/voice.png" alt="Кнопка «button»">
                     </button>
                 </form>
             </div>
 
         </div>
         <div class="login">
-            <button class="logoBtn">
-                <img src="images/options3.png" alt="настройки">
+            <button class="settingsBtn">
+                <img src="images/options3.png" alt="">
             </button>
             <button class="loginBtn">
-                <img src="images/sss.png" alt="вход">
+                <img src="images/sss.png" alt="Кнопка «button»">
                 <b class="text">Войти</b>
             </button>
         </div>
@@ -289,25 +272,14 @@
     <div class="item item_2">
         <div class="navigation">
             <button class="navigationBtn">
-                <img src="images/home2.png" alt="главная">
+                <img src="images/home2.png" alt="3">
                 Главная
             </button>
-            <button class="navigationBtn">
-                <img src="images/shorts.png" alt="shorts">
-                Shorts
+            <button class="navigationBtn">Shorts
             </button>
-            <button class="navigationBtn">
-                <img src="images/subscribe.png" alt="subscribe">
-                Подписки
-            </button>
-            <button class="navigationBtn">
-                <img src="images/library.png" alt="library">
-                Библиоетека
-            </button>
-            <button class="navigationBtn">
-                <img src="images/history.png" alt="history">
-                История
-            </button>
+            <button class="navigationBtn">Подписки</button>
+            <button class="navigationBtn">Библиоетека</button>
+            <button class="navigationBtn">История</button>
         </div>
         <div class="recommendation-video">
             <div class="recommendation">
