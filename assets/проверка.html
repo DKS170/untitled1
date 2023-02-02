@@ -13,22 +13,15 @@
             padding: 0;
         }
         .container{
-            display: grid;
-            grid-template-columns: 10% 90%;
-            grid-auto-rows: auto;
+
 
 
         }
         .item {
-
             border: 1px solid black;
         }
         /*шапка*/
         .item_1{
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 1;
-            grid-row-end: 3;
             display: flex;
             justify-content: space-between;
             align-content: center;
@@ -59,7 +52,6 @@
         }
         .logo{
             display: flex;
-
             justify-content: center;
             align-items: center;
 
@@ -68,21 +60,23 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            min-width: 0;
+            flex: 0 1 728px;
 
 
         }
         .searchForm{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+            margin: 0 0 0 40px;
             padding: 0 4px;
             flex: 1;
+            flex-basis: auto;
+
+
         }
         .form{
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: center;
 
 
         }
@@ -124,6 +118,7 @@
             border-radius: 40px;
             border: 1px solid #fff;
             background:white;
+            
 
         }
         .voice:hover{
@@ -158,21 +153,17 @@
 
         /*главный блок*/
         .item_2{
-            grid-column-start: 1;
-            grid-column-end: 4;
             display: grid;
-            box-sizing: border-box;
             border: 1px solid black;
-            flex-wrap: wrap;
-            grid-template-columns: 5% 95%;
+            grid-template-columns: 100px 1fr;
             height: 100%;
         }
 
         .navigation{
             display: flex;
             flex-direction: column;
-            height: 20%;
-
+            padding-left: 16px;
+            max-width: 100px;
 
         }
         .navigationBtn{
@@ -186,6 +177,7 @@
             text-align: center;
             margin-bottom: 1px;
             font-size: 10px;
+            width: 74px;
         }
         .navigationBtn img{
             padding: 5px 0;
@@ -222,6 +214,7 @@
             padding: 0 15px;
             gap: 20px;
             padding-top: 24px;
+
 
         }
         .video-container{
@@ -322,14 +315,14 @@
                 <button class="panel">Посмотрено</button>
 
             </div>
-            <!--<div class="contentVideo">
+            <div class="contentVideo">
                 <div class="video-container">
                     <div class="video-block">
                         <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="video-text">
                         <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-                        UI-компоненты №2. Сетка карточек и фиксированный фильтр
+                        <p>UI-компоненты №2. Сетка карточек и фиксированный фильтр</p>
                     </div>
                 </div>
                 <div class="video-container">
@@ -413,7 +406,7 @@
                         UI-компоненты №2. Сетка карточек и фиксированный фильтр
                     </div>
                 </div>
-            </div>-->
+            </div>
         </div>
     </div>
 </div>
