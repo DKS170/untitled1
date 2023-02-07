@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>YT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="YT.js">
   <style>
     *{
       box-sizing: border-box;
@@ -63,13 +64,12 @@
       align-items: center;
       flex: 0 1 728px;
 
-
     }
     .searchForm{
-      margin: 0 0 0 40px;
-      padding: 0 0 0 25px;
+      max-width: 644px;
       flex: 1;
       flex-basis: auto;
+      width: 82%;
 
 
     }
@@ -77,13 +77,11 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-
-
-
-
+      justify-content: center;
     }
     .search input{
       width: 82%;
+      max-width: 540px;
       min-height: 40px;
       display: flex;
       flex-direction: row;
@@ -233,6 +231,39 @@
       align-items: center;
       display: inline-flex;
     }
+    .panel:hover{
+      background-color: #ddd;
+    }
+    #left{
+      border-radius: 40px;
+      padding: 6px;
+      border: none;
+      position: absolute;
+      left: 70px;
+      margin: 10px;
+    }
+    #left:hover{
+      background-color: #ddd;
+    }
+
+    #right{
+      border-radius: 40px;
+      padding: 6px;
+      border: none;
+      position: absolute;
+      right: 0;
+      margin: 10px;
+    }
+    #right:hover{
+      background-color: #ddd;
+    }
+    .isShowBtn{
+      opacity: 1;
+       &_hide{
+         opacity: 0;
+       }
+
+    }
     .contentVideo{
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -331,6 +362,9 @@
     </div>
     <div class="recommendation-video">
       <div class="recommendation">
+        <button id="left">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M14.6,18.4L8.3,12l6.4-6.4l0.7,0.7L9.7,12l5.6,5.6L14.6,18.4z" class="style-scope yt-icon"></path></g></svg>
+        </button>
         <button class="panel">Все</button>
         <button class="panel">Видеоигры</button>
         <button class="panel">Сейчас в эфире</button>
@@ -338,6 +372,9 @@
         <button class="panel">Туристические направления</button>
         <button class="panel">Последние опубликованные</button>
         <button class="panel">Посмотрено</button>
+        <button id="right" class="isShowBtn">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z" class="style-scope yt-icon"></path></g></svg>
+        </button>
 
       </div>
       <div class="contentVideo">
@@ -377,60 +414,60 @@
             UI-компоненты №2. Сетка карточек и фиксированный фильтр
           </div>
         </div>
-        <div class="video-container">
-          <div class="video-block">
-            <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="video-text">
-            <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-            UI-компоненты №2. Сетка карточек и фиксированный фильтр
-          </div>
+        <!---<div class="video-container">
+            <div class="video-block">
+                <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-text">
+                <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
+                UI-компоненты №2. Сетка карточек и фиксированный фильтр
+            </div>
         </div>
         <div class="video-container">
-          <div class="video-block">
-            <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="video-text">
-            <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-            UI-компоненты №2. Сетка карточек и фиксированный фильтр
-          </div>
+            <div class="video-block">
+                <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-text">
+                <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
+                UI-компоненты №2. Сетка карточек и фиксированный фильтр
+            </div>
         </div>
         <div class="video-container">
-          <div class="video-block">
-            <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="video-text">
-            <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-            UI-компоненты №2. Сетка карточек и фиксированный фильтр
-          </div>
+            <div class="video-block">
+                <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-text">
+                <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
+                UI-компоненты №2. Сетка карточек и фиксированный фильтр
+            </div>
         </div>
         <div class="video-container">
-          <div class="video-block">
-            <iframe  src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="video-text">
-            <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-            UI-компоненты №2. Сетка карточек и фиксированный фильтр
-          </div>
+            <div class="video-block">
+                <iframe  src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-text">
+                <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
+                UI-компоненты №2. Сетка карточек и фиксированный фильтр
+            </div>
         </div>
         <div class="video-container">
-          <div class="video-block">
-            <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="video-text">
-            <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-            UI-компоненты №2. Сетка карточек и фиксированный фильтр
-          </div>
+            <div class="video-block">
+                <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-text">
+                <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
+                UI-компоненты №2. Сетка карточек и фиксированный фильтр
+            </div>
         </div>
         <div class="video-container">
-          <div class="video-block">
-            <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="video-text">
-            <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
-            UI-компоненты №2. Сетка карточек и фиксированный фильтр
-          </div>
-        </div>
+            <div class="video-block">
+                <iframe src="https://www.youtube.com/embed/F9D-PjwfiXI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-text">
+                <img draggable="false" class="style-scope yt-img-shadow" alt="" width="48" src="https://yt3.ggpht.com/jChD5X8rXJeHUuwoB0_FdTNMIsEWrib1uSo88QvMM59724ajQP42MOCCnKyNu3TiNGKkqk7k2q8=s68-c-k-c0x00ffffff-no-rj">
+                UI-компоненты №2. Сетка карточек и фиксированный фильтр
+            </div>
+        </div>--->
       </div>
     </div>
   </div>
