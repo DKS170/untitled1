@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>YT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="YT.js">
+
   <style>
     *{
       box-sizing: border-box;
@@ -234,7 +234,7 @@
     .panel:hover{
       background-color: #ddd;
     }
-    #left{
+    .left{
       border-radius: 40px;
       padding: 6px;
       border: none;
@@ -242,11 +242,8 @@
       left: 70px;
       margin: 10px;
     }
-    #left:hover{
-      background-color: #ddd;
-    }
 
-    #right{
+    .right{
       border-radius: 40px;
       padding: 6px;
       border: none;
@@ -254,15 +251,8 @@
       right: 0;
       margin: 10px;
     }
-    #right:hover{
+    .right:hover{
       background-color: #ddd;
-    }
-    .isShowBtn{
-      opacity: 1;
-       &_hide{
-         opacity: 0;
-       }
-
     }
     .contentVideo{
       display: grid;
@@ -339,6 +329,7 @@
 
   <div class="item item_2">
     <div class="navigation">
+
       <button class="navigationBtn">
         <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g class="style-scope yt-icon"><path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path></g></svg>
         Главная
@@ -362,7 +353,7 @@
     </div>
     <div class="recommendation-video">
       <div class="recommendation">
-        <button id="left">
+        <button class="left">
           <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M14.6,18.4L8.3,12l6.4-6.4l0.7,0.7L9.7,12l5.6,5.6L14.6,18.4z" class="style-scope yt-icon"></path></g></svg>
         </button>
         <button class="panel">Все</button>
@@ -372,7 +363,7 @@
         <button class="panel">Туристические направления</button>
         <button class="panel">Последние опубликованные</button>
         <button class="panel">Посмотрено</button>
-        <button id="right" class="isShowBtn">
+        <button class="right">
           <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z" class="style-scope yt-icon"></path></g></svg>
         </button>
 

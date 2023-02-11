@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>YT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script>
+        document.querySelector("#right").onclick = function(){
+            alert("Вы нажали на кнопку");
+        }
+    </script>
     <style>
         *{
             box-sizing: border-box;
@@ -75,7 +79,6 @@
         }
         .form{
             display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: center;
         }
@@ -84,7 +87,6 @@
             max-width: 540px;
             min-height: 40px;
             display: flex;
-            flex-direction: row;
             align-items: center;
             align-content: center;
             border: 1px solid #ccc;
@@ -112,7 +114,6 @@
         }
         .voice{
             display: flex;
-            flex-direction: row;
             align-items: center;
             height: 100%;
             padding: 8px;
@@ -129,7 +130,6 @@
 
         .login{
             display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: flex-end;
 
@@ -148,7 +148,6 @@
         .loginBtn{
             padding: 5px 15px;
             display: flex;
-            flex-direction: row;
             align-items: center;
             align-content: center;
             justify-content: center;
@@ -209,7 +208,6 @@
 
         .recommendation-video{
             display: grid;
-            flex-direction: row;
             align-items: center;
         }
         /*рекомендации*/
@@ -241,6 +239,9 @@
             position: absolute;
             left: 70px;
             margin: 10px;
+        }
+        .left:hover{
+            background-color: #ddd;
         }
 
         .right{
@@ -363,7 +364,7 @@
                 <button class="panel">Туристические направления</button>
                 <button class="panel">Последние опубликованные</button>
                 <button class="panel">Посмотрено</button>
-                <button class="right">
+                <button class="right" id="right">
                     <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z" class="style-scope yt-icon"></path></g></svg>
                 </button>
 
