@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <title>YT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <script>
+    document.querySelector("#right").onclick = function(){
+      alert("Вы нажали на кнопку");
+    }
+  </script>
   <style>
     *{
       box-sizing: border-box;
@@ -43,14 +47,42 @@
     .navBtn:hover{
       background-color: #ddd;
     }
+    .burger-menu_lines,
+    .burger-menu_lines::after,
+    .burger-menu_lines::before {
+      position: fixed;
+      width: 18px;
+      height: 1px;
+
+      left: 28px;
+      background: red;
+    }
+    .burger-menu_lines {
+      top: 28px;
+      border: none;
+    }
+    .burger-menu_lines::before{
+      content: "";
+      top: 22px;
+    }
+    .burger-menu_lines::after{
+      content: "";
+      top: 34px;
+    }
+
+
+
+
+
     .logoBtn{
       display: flex;
       align-items: center;
-      background: white;
+      background: transparent;
       border: none;
       cursor: pointer;
       padding: 18px 14px 18px 16px;
     }
+    /*лого и бургер меню*/
     .logo{
       display: flex;
       justify-content: center;
@@ -58,6 +90,7 @@
 
 
     }
+    /*поиск*/
     .search{
       display: flex;
       flex-direction: row;
@@ -75,7 +108,6 @@
     }
     .form{
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: center;
     }
@@ -84,7 +116,6 @@
       max-width: 540px;
       min-height: 40px;
       display: flex;
-      flex-direction: row;
       align-items: center;
       align-content: center;
       border: 1px solid #ccc;
@@ -112,7 +143,6 @@
     }
     .voice{
       display: flex;
-      flex-direction: row;
       align-items: center;
       height: 100%;
       padding: 8px;
@@ -127,9 +157,9 @@
       background-color: #ddd;
     }
 
+    /*регистрация*/
     .login{
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: flex-end;
 
@@ -148,7 +178,6 @@
     .loginBtn{
       padding: 5px 15px;
       display: flex;
-      flex-direction: row;
       align-items: center;
       align-content: center;
       justify-content: center;
@@ -173,12 +202,14 @@
 
     /*главный блок*/
     .item_2{
+
       display: grid;
       border: 1px solid black;
       grid-template-columns: 80px 1fr;
       height: 100%;
     }
 
+    /*меню*/
     .navigation{
       display: flex;
       flex-direction: column;
@@ -186,6 +217,7 @@
       max-width: 100px;
 
     }
+
     .navigationBtn{
       border-radius: 10px;
       border: none;
@@ -209,14 +241,13 @@
 
     .recommendation-video{
       display: grid;
-      flex-direction: row;
       align-items: center;
     }
     /*рекомендации*/
     .recommendation{
       display: flex;
       padding: 0;
-      width: 100%;
+      width: 90%;
       overflow: hidden;
       white-space: nowrap;
     }
@@ -242,6 +273,9 @@
       left: 70px;
       margin: 10px;
     }
+    .left:hover{
+      background-color: #ddd;
+    }
 
     .right{
       border-radius: 40px;
@@ -254,6 +288,7 @@
     .right:hover{
       background-color: #ddd;
     }
+    /*видео*/
     .contentVideo{
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -295,6 +330,9 @@
   <div class="item item_1">
     <div class="logo">
       <button class="navBtn">
+        <a href="#" class="burger-menu">
+          <span class="burger-menu_lines"></span>
+        </a>
         <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g class="style-scope yt-icon"><path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon"></path></g></svg>
       </button>
       <button class="logoBtn">
@@ -363,7 +401,7 @@
         <button class="panel">Туристические направления</button>
         <button class="panel">Последние опубликованные</button>
         <button class="panel">Посмотрено</button>
-        <button class="right">
+        <button class="right" id="right">
           <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z" class="style-scope yt-icon"></path></g></svg>
         </button>
 

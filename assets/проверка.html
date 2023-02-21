@@ -27,6 +27,10 @@
         }
         /*шапка*/
         .item_1{
+            top: 0;
+            position: fixed;
+            width: 100%;
+            z-index: 2020;
             display: flex;
             justify-content: space-between;
             align-content: center;
@@ -50,11 +54,12 @@
         .logoBtn{
             display: flex;
             align-items: center;
-            background: white;
+            background: transparent;
             border: none;
             cursor: pointer;
             padding: 18px 14px 18px 16px;
         }
+        /*лого и бургер меню*/
         .logo{
             display: flex;
             justify-content: center;
@@ -62,6 +67,7 @@
 
 
         }
+        /*поиск*/
         .search{
             display: flex;
             flex-direction: row;
@@ -128,6 +134,7 @@
             background-color: #ddd;
         }
 
+        /*регистрация*/
         .login{
             display: flex;
             align-items: center;
@@ -172,19 +179,26 @@
 
         /*главный блок*/
         .item_2{
+
             display: grid;
             border: 1px solid black;
             grid-template-columns: 80px 1fr;
             height: 100%;
         }
 
+        /*меню*/
         .navigation{
+            width: 100%;
+            top: 54px;
+            z-index: 2020;
+            position: fixed;
             display: flex;
             flex-direction: column;
             padding-left: 5px;
             max-width: 100px;
 
         }
+
         .navigationBtn{
             border-radius: 10px;
             border: none;
@@ -212,9 +226,14 @@
         }
         /*рекомендации*/
         .recommendation{
+            left: 100px;
+            right: 0;
+            top: 54px;
+            z-index: 2020;
+            position: fixed;
             display: flex;
             padding: 0;
-            width: 100%;
+            width: 90%;
             overflow: hidden;
             white-space: nowrap;
         }
@@ -255,6 +274,7 @@
         .right:hover{
             background-color: #ddd;
         }
+        /*видео*/
         .contentVideo{
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -296,6 +316,9 @@
     <div class="item item_1">
         <div class="logo">
             <button class="navBtn">
+                <a class="burger-menu">
+                    <span class="burger-menu_lines"></span>
+                </a>
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g class="style-scope yt-icon"><path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon"></path></g></svg>
             </button>
             <button class="logoBtn">
