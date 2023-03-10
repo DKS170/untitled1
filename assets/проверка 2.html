@@ -751,19 +751,27 @@
 </div>
 <script>
 
-
-  if (window.matchMedia("(max-width: 80%)").matches){
+  if (window.innerWidth >= 655) {
     document.addEventListener("DOMContentLoaded",function (){
       document.getElementById("navBtn").addEventListener("click",function (){
         document.getElementById("sidebar-mini").classList.toggle("hidden")
         document.getElementById("sidebar").classList.toggle("hidden")
-        document.getElementById("menu").classList.toggle("visible")
         document.getElementById("item_2").classList.toggle("item_2_sidebar")
       })
     })
-
+  } else if (window.innerWidth <= 655)  {
+    document.addEventListener("DOMContentLoaded",function (){
+      document.getElementById("navBtn").addEventListener("click",function (){
+        document.getElementById("menu").classList.toggle("visible")
+      })
+    })
   }
 </script>
 
 </body>
 </html>
+
+
+
+
+</script>
