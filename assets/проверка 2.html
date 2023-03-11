@@ -121,7 +121,7 @@
       width: 82%;
     }
     .search input{
-      max-width: 540px;
+      width: 80%;
       min-height: 40px;
       display: flex;
       align-items: center;
@@ -364,7 +364,13 @@
       grid-template-columns: 20% 80%;
     }
 
-    @media screen and (max-width: 645px) {
+
+    @media screen and (max-width: 1355px) {
+      /*.sidebar{*/
+      /*  display: none;*/
+      /*}*/
+    }
+    @media screen and (max-width: 655px) {
       .navigation{
         display: none;
         width: 20px;
@@ -373,7 +379,7 @@
         grid-template-columns: 1fr;
       }
       .hidden{
-        /*display: none;*/
+        display: none;
 
       }
 
@@ -437,8 +443,9 @@
         background: transparent;
       }
 
-    }
-    @media screen and (max-width: 655px) {
+
+
+
       .form{
         display: none;
       }
@@ -750,22 +757,29 @@
   </div>
 </div>
 <script>
-
-  if (window.innerWidth >= 655) {
-    document.addEventListener("DOMContentLoaded",function (){
-      document.getElementById("navBtn").addEventListener("click",function (){
+  function myFunction(x) {
+    if (x.matches) { // Если медиа запрос совпадает
+      document.getElementById("navBtn").onclick = function() {
+        document.getElementById("menu").classList.toggle("visible")
+      };
+      document.getElementById("item_2").classList.remove("item_2_sidebar")
+      document.getElementById("sidebar-mini").classList.remove("hidden")
+      document.getElementById("sidebar").classList.add("hidden")
+    } else {
+      document.getElementById("navBtn").onclick = function() {
         document.getElementById("sidebar-mini").classList.toggle("hidden")
         document.getElementById("sidebar").classList.toggle("hidden")
         document.getElementById("item_2").classList.toggle("item_2_sidebar")
-      })
-    })
-  } else if (window.innerWidth <= 655)  {
-    document.addEventListener("DOMContentLoaded",function (){
-      document.getElementById("navBtn").addEventListener("click",function (){
-        document.getElementById("menu").classList.toggle("visible")
-      })
-    })
+      };
+      document.getElementById("menu").classList.toggle("hidden")
+      document.getElementById("menu").classList.remove("visible")
+    }
   }
+
+  var x = window.matchMedia("(max-width: 1355px)")
+  myFunction(x)
+  x.addListener(myFunction)
+
 </script>
 
 </body>
@@ -774,4 +788,3 @@
 
 
 
-</script>
